@@ -1,0 +1,200 @@
+
+@media all and (max-width:1024px){
+     img{
+        width:22em;
+        margin-bottom: 10px;
+    }
+    #banner .banner-right img {
+            width: 13em;
+
+    }
+    #form-home form{
+        padding: 0.6em;
+    }
+}
+
+
+
+@media all and (max-width:768px){
+   .header-top .header-right{
+       font-size: 1em;
+   }
+
+   img{
+    width: 25em;
+   }
+   #post .one-post{
+       margin-bottom: 3em;
+    }
+
+  #post .one-post .details .item-label span{
+        font-size: 0.8em;
+    }
+
+.hidden-md-down {
+    display: none !important;
+  }
+
+           /* end post  */
+ #form-home form h3{
+        text-align: center;
+      }
+     #form-home form p{
+        text-align: center;
+      }
+
+}
+@media all and (max-width:425px){
+    .header-top{
+         margin-bottom: 2em;
+    }
+    .header-top #logo{
+        width: 20em;
+        margin-bottom: 0.5em;
+    }
+
+
+    img{
+        width: 24.5em;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+   #collapsibleNavbar .navbar-nav .nav-item .nav-link{
+    text-align: center;
+        }
+        .marRight7{
+               margin-right: 3em;
+        }
+         /* end header  */
+    #post .one-post .details .title{
+        text-align: center;
+    }
+      #post .one-post .details .item-label{
+        text-align: center;
+      }
+     #post .one-post .details .home-content{
+          text-align: center;
+     }
+
+         /* end post  */
+
+    #form-home{
+        height: 21em;
+        margin-top: 2em;
+    }
+
+
+    #form-home form{
+        padding: 0.6em;
+    }
+    #form-home form h3{
+        color: white;
+        font-size: 1.4em;
+    }
+    #form-home form p{
+        padding :0.6em 0em;
+        text-align: center;
+    }
+    #form-home form .email{
+        width: 22em;
+    }
+
+}
+
+@media all and (max-width:375px){
+
+    .header-top #logo{
+       width: 19em;
+       margin-bottom: 0.5em;
+    }
+
+    img{
+        width: 21.6em;
+      margin-right: 0px;
+    }
+
+    #collapsibleNavbar .navbar-nav .nav-item .nav-link{
+    text-align: center;
+}
+.marRight7{
+       margin-right: 2em;
+}
+
+          /* end post  */
+
+    #form-home{
+        height: 21em;
+        margin-top: 2em;
+    }
+
+
+    #form-home form{
+        padding: 0.6em;
+    }
+    #form-home form h3{
+        color: white;
+        font-size: 1.2em;
+    }
+    #form-home form p{
+        padding :0.6em 0em;
+    }
+    #form-home form .email{
+        width: 19em;
+    }
+}
+@media all and (max-width:320px){
+
+.header-top #logo{
+       width: 15em;
+    }
+.header-top #logo{
+      margin-bottom:  0.5em;
+    }
+#collapsibleNavbar .navbar-nav .nav-item .nav-link{
+    text-align: center;
+}
+.marRight7{
+       margin-right: 2em;
+}
+
+      /* end header  */
+
+    #post{
+        margin-top: 20px;
+    }
+    img{
+        width: 18em;
+        float: left;
+        margin-right: 0px;
+    }
+    #post .one-post .details .title a{
+        margin-top: 0.5em;
+    }
+    #post .one-post .details .item-label span{
+         font-size: 0.8em;
+    }
+      /* end post  */
+
+
+#form-home{
+
+    height: 21em;
+    margin-top: 2em;
+}
+
+
+#form-home form h3{
+    color: white;
+    font-size: 1em;
+}
+#form-home form p{
+    padding :0.6em 0em;
+}
+#form-home form .email{
+    width: 16em;
+}
+
+
+
+
+}
