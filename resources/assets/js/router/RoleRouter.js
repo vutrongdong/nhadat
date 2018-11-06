@@ -3,17 +3,17 @@ import NewRole from '../components/NewRole';
 
 export default [
     {
-        path: '/role',
+        path: '/admin/role',
         name: 'role',
         component: Role
     },
     {
-        path: '/role/create',
+        path: '/admin/role/create',
         name: 'role.create',
         component: NewRole
     },
     {
-        path: '/role/:id/edit',
+        path: '/admin/role/:id/edit',
         name: 'role.edit',
         component: NewRole
     }

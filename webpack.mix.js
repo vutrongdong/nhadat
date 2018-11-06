@@ -43,4 +43,6 @@ mix.autoload({
         'public/js/frontend/v1/site.js'
     ], 'public/js/frontend/v1/site.js')
    .sass('resources/assets/sass/app.scss', 'public/css')
-   .sass('resources/assets/sass/frontend/v1.scss', 'public/css/frontend/v1/site.css');
+   .sass('resources/assets/sass/frontend/ecom.scss', 'public/css/frontend/ecom/site.css')
+   .sass('resources/assets/sass/frontend/home.scss', 'public/css/frontend/ecom/home.css');
+   // .sass('resources/assets/sass/frontend/v1.scss', 'public/css/frontend/v1/site.css');

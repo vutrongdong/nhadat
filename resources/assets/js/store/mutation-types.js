@@ -23,6 +23,7 @@ export const SET_DETAIL_CATEGORY             = 'SET_DETAIL_CATEGORY'
 export const SET_CATEGORY_PAGINATION         = 'SET_CATEGORY_PAGINATION'
 // blog module
 export const SET_BLOG                    = 'SET_BLOG'
+export const SET_BLOG_HOT                    = 'SET_BLOG_HOT'
 export const REMOVE_BLOG                 = 'REMOVE_BLOG'
 export const SET_DETAIL_BLOG             = 'SET_DETAIL_BLOG'
 export const SET_BLOG_PAGINATION         = 'SET_BLOG_PAGINATION'

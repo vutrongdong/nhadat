@@ -4,17 +4,17 @@ import EditCategory from '../components/category/Edit';
 
 export default [
     {
-        path: '/categories',
+        path: '/admin/categories',
         name: 'category',
         component: Category
     },
     {
-        path: '/categories/create',
+        path: '/admin/categories/create',
         name: 'category.create',
         component: NewCategory
     },
     {
-        path: '/categories/edit/:id',
+        path: '/admin/categories/edit/:id',
         name: 'category.edit',
         component: EditCategory
     }

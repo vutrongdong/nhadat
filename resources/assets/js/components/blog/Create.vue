@@ -5,8 +5,8 @@
                 Tạo mới bài viết
             </h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item"><router-link to="/blogs">Bài viết</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'blog'}">Bài viết</router-link></li>
                 <li class="breadcrumb-item active">Tạo mới bài viết</li>
             </ol>
             <p class="clearfix"></p>
@@ -33,7 +33,7 @@ export default {
                 blog: blog,
                 cb: () => {
                     $.Notification.autoHideNotify('success', 'top right', 'Thành công', 'Thêm dữ liệu thành công.')
-                    this.$router.push('/blogs')
+                    this.$router.push({ name: 'blog' })
                 }
             })
         }

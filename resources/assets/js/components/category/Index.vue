@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-12">
             <div class="btn-group pull-right m-t-15">
-                <router-link to="/categories/create" class="btn btn-default waves-effect waves-light">Thêm mới danh mục</router-link>
+                <router-link :to="{ name: 'category.create'}" class="btn btn-default waves-effect waves-light">Thêm mới danh mục</router-link>
             </div>
             <h4 class="page-title">
                 Danh mục
             </h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
                 <li class="breadcrumb-item active">Danh mục</li>
             </ol>
             <p class="clearfix"></p>
@@ -78,8 +78,8 @@ export default {
     data () {
         return {
             filters: {
-                q: null,
-                page: null
+                q: '',
+                page: ''
             }
         }
     },
@@ -93,6 +93,7 @@ export default {
         filter: debounce(function () {
             this.fetchCategories({params: this.filters})
         }, 500),
+
         deleteCategory (id) {
             swal({
               title: 'Cảnh báo?',

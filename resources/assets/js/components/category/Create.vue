@@ -5,8 +5,8 @@
                 Tạo mới danh mục
             </h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item"><router-link to="/categories">Danh mục</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'category'}">Danh mục</router-link></li>
                 <li class="breadcrumb-item active">Tạo mới danh mục</li>
             </ol>
             <p class="clearfix"></p>
@@ -33,7 +33,7 @@ export default {
                 category: category,
                 cb: () => {
                     $.Notification.autoHideNotify('success', 'top right', 'Thành công', 'Thêm dữ liệu thành công.')
-                    this.$router.push('/categories')
+                    this.$router.push({ name: 'category'})
                 }
             })
         }

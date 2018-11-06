@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-12">
             <div class="btn-group pull-right m-t-15">
-                <router-link to="/blogs/create" class="btn btn-default waves-effect waves-light">Thêm mới bài viết</router-link>
+                <router-link :to="{ name: 'blog.create'}" class="btn btn-default waves-effect waves-light">Thêm mới bài viết</router-link>
             </div>
             <h4 class="page-title">
                 Bài viết
             </h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
                 <li class="breadcrumb-item active">Bài viết</li>
             </ol>
             <p class="clearfix"></p>
@@ -33,6 +33,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
+
+
+
                                     <tr v-for="(blog, idx) in allBlogs" :key="blog.id">
                                         <td>{{ ++idx }}</td>
                                         <td>{{ blog.title }}</td>
@@ -78,8 +82,8 @@ export default {
     data () {
         return {
             filters: {
-                q: null,
-                page: null
+                q: '',
+                page: ''
             }
         }
     },

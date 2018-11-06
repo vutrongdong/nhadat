@@ -5,8 +5,8 @@
                 {{ title }}
             </h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item"><router-link to="/users">User management</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'user'}">User management</router-link></li>
                 <li class="breadcrumb-item active">{{ title }}</li>
             </ol>
             <p class="clearfix"></p>
@@ -128,14 +128,14 @@ export default {
         },
 
         loadUser() {
-            let uID = this.$route.params.id || null;
+            let uID = this.$route.params.id || '';
             this.getUser({
                 id: uID,
                 cb: this.fillUser
             });
 
-            this.title = uID == null ? 'Create a new user' : 'Edit user'
-            this.formType = uID == null ? true : false //
+            this.title = uID == '' ? 'Create a new user' : 'Edit user'
+            this.formType = uID == '' ? true : false //
         },
 
         fillUser(user) {
@@ -155,7 +155,7 @@ export default {
                         user: this.user,
                         cb: () => {
                             $.Notification.autoHideNotify('success', 'top right', 'Thành công', 'Cập nhật dữ liệu thành công.')
-                            this.$router.push('/users')
+                            this.$router.push({ name: 'user'})
                         }
                     })
                 }

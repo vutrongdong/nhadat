@@ -2,7 +2,7 @@ import Setting from '../components/Setting';
 
 export default [
     {
-        path: '/setting',
+        path: '/admin/setting',
         name: 'setting',
         component: Setting
     }

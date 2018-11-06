@@ -8,19 +8,22 @@ import UserRouter from './UserRouter.js';
 import CategoryRouter from './CategoryRouter.js';
 import BlogRouter from './BlogRouter.js';
 import TagRouter from './TagRouter.js';
+import FrontendRouter from './Frontend.js';
+
 
 Vue.use(Router);
 
 export default new Router({
     mode: 'history',
-    base: '/admin',
+    base:'/',
     routes: [
-        ...HomeRouter,
-        ...RoleRouter,
-        ...SettingRouter,
-        ...UserRouter,
-        ...CategoryRouter,
-        ...BlogRouter,
-        ...TagRouter
+    ...HomeRouter,
+    ...RoleRouter,
+    ...SettingRouter,
+    ...UserRouter,
+    ...CategoryRouter,
+    ...BlogRouter,
+    ...TagRouter,
+    ...FrontendRouter,
     ],
 });

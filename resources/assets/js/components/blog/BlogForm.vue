@@ -75,7 +75,8 @@
                             toolbar1="formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | codesample"
                             toolbar2=""
                             :other_options="{ height: '300px', images_upload_handler: handleImageAdded }"
-                            @editorInit="e => e.setContent(blog.content ? blog.content : '')"></tinymce>
+                            @editorInit="e => e.setContent(blog.content ? blog.content : '')"
+                        ></tinymce>
                     </div>
                 </div>
                 <div class="col-12">
@@ -92,7 +93,7 @@
             <div class="row">
                 <div class="col-12">
                     <button class="btn btn-default" type="submit"><span v-if="this.type === 'create'">Tạo bài viết</span><span v-else>Lưu lại</span></button>
-                    <router-link v-if="type !== 'modal'" to="/blogs" class="btn btn-link">Trở lại</router-link>
+                    <router-link v-if="type !== 'modal'" :to="{ name: 'blog'}" class="btn btn-link">Trở lại</router-link>
                 </div>
             </div>
         </form>
@@ -259,7 +260,6 @@ export default {
               let response = await axios.post('/blogs/upload', formData)
               if (response.data.code === 1) {
                 success(response.data.data.path)
-                console.log("data response :",response);
               } else {
                 return false
               }

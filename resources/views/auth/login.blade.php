@@ -53,34 +53,7 @@
                             </button>
                         </div>
                     </div>
-
-                    <div class="form-group m-t-20 m-b-0">
-                        <div class="col-12">
-                            <a href="{{ route('password.request') }}" class="text-dark"><i class="fa fa-lock m-r-5"></i> Quên mật khẩu?</a>
-                        </div>
-                    </div>
-
-                    <div class="form-group m-t-20 m-b-0">
-                        <div class="col-12 text-center">
-                            <h5 class="font-18"><b>Hoặc đăng nhập với</b></h5>
-                        </div>
-                    </div>
-
-                    <div class="form-group m-b-0 text-center">
-                        <div class="col-12">
-                            <a href="{{ route('login-with-social', 'facebook') }}" class="btn btn-sm btn-facebook waves-effect waves-light m-t-20">
-                               <i class="fa fa-facebook m-r-5"></i> Facebook
-                            </a>
-                        </div>
-                    </div>
                 </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <p>
-                    Chưa có tài khoản? <a href="{{ route('register') }}" class="text-primary m-l-5"><b>Đăng ký ngay</b></a>
-                </p>
             </div>
         </div>
     </div>

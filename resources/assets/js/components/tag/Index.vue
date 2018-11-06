@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-12">
             <div class="btn-group pull-right m-t-15">
-                <router-link to="/tags/create" class="btn btn-default waves-effect waves-light">Thêm mới tag</router-link>
+                <router-link :to="{ name: 'tag.create'}" class="btn btn-default waves-effect waves-light">Thêm mới tag</router-link>
             </div>
             <h4 class="page-title">
                 Tag
             </h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
                 <li class="breadcrumb-item active">Tag</li>
             </ol>
             <p class="clearfix"></p>
@@ -74,8 +74,8 @@ export default {
     data () {
         return {
             filters: {
-                q: null,
-                page: null
+                q: '',
+                page: ''
             }
         }
     },

@@ -1,0 +1,171 @@
+#home #title_main {
+  text-align: center;
+}
+
+#home #title_main .prohomeone-title {
+  text-align: center;
+}
+
+#home #title_main .prohomeone-line {
+  height: 1px;
+  width: 30%;
+  background: #333;
+  margin: 5px auto;
+}
+
+#home #title_main .prohomeone-desc {
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  margin: 14px 0 5px 0;
+  display: block;
+}
+
+#home #title_main h2 {
+  color: #1B5B87;
+  font-size: 26px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#home #title_main h2 a {
+  text-decoration: none;
+}
+
+#home #title_main h2 a:hover {
+  color: red;
+}
+
+#home #conten-main .img-row {
+  float: right;
+}
+
+#home #conten-main .company a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+  #home {
+    margin: 20px 20px;
+  }
+
+  #home #title_main .prohomeone-line {
+    height: 1px;
+    width: 30%;
+    margin: 5px auto;
+  }
+
+  #home #title_main .prohomeone-desc {
+    font-size: 16px;
+    margin: 14px 0 5px 0;
+  }
+
+  #home #title_main h2 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #home {
+    margin: 15px 0px !important;
+  }
+
+  #home #title_main .prohomeone-line {
+    height: 1px;
+    width: 30%;
+    margin: 5px auto;
+  }
+
+  #home #title_main .prohomeone-desc {
+    font-size: 16px;
+    margin: 14px 0 5px 0;
+  }
+
+  #home #title_main h2 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home {
+    margin: 10px 0px;
+  }
+
+  #home #title_main .prohomeone-line {
+    height: 1px;
+    width: 30%;
+    margin: 5px auto;
+  }
+
+  #home #title_main .prohomeone-desc {
+    font-size: 16px;
+    margin: 14px 0 5px 0;
+  }
+
+  #home #title_main h2 {
+    font-size: 24px;
+  }
+
+  #home #conten-main .card-main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home {
+    margin: 5px 0px;
+  }
+
+  #home #title_main .prohomeone-line {
+    height: 1px;
+    width: 30%;
+    margin: 5px auto;
+  }
+
+  #home #title_main .prohomeone-desc {
+    font-size: 16px;
+    margin: 14px 0 5px 0;
+  }
+
+  #home #title_main h2 {
+    font-size: 22px;
+  }
+
+  #home #conten-main .card-main {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #home {
+    margin: 0px 0px;
+  }
+
+  #home #title_main .prohomeone-line {
+    height: 1px;
+    width: 30%;
+    margin: 5px auto;
+  }
+
+  #home #title_main .prohomeone-desc {
+    font-size: 16px;
+    margin: 14px 0 5px 0;
+  }
+
+  #home #title_main h2 {
+    font-size: 20px;
+  }
+
+  #home #conten-main .card-main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+

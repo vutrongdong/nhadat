@@ -1,7 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/frontend/v1/site.css": "/css/frontend/v1/site.css",
+    "/css/frontend/ecom/site.css": "/css/frontend/ecom/site.css",
+    "/css/frontend/ecom/home.css": "/css/frontend/ecom/home.css",
     "/js/frontend/v1/site.js": "/js/frontend/v1/site.js",
     "/js/site.js": "/js/site.js"
 }

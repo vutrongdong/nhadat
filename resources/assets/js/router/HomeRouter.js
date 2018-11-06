@@ -3,12 +3,12 @@ import Profile from '../components/Profile.vue';
 
 export default [
     {
-        path: '/',
+        path: 'admin/',
         name: 'home',
         component: Home
     },
     {
-        path: '/profile',
+        path: 'admin/profile',
         name: 'profile',
         component: Profile
     }

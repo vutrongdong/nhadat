@@ -3,8 +3,8 @@
         <div class="col-12">
             <h4 class="page-title">{{ title }}</h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item"><router-link to="/role">Role management</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'role'}">Role management</router-link></li>
                 <li class="breadcrumb-item active">{{ title }}</li>
             </ol>
             <p class="clearfix"></p>
@@ -76,16 +76,16 @@ export default {
         },
 
         getRole() {
-            let rID = this.$route.params.id || null;
+            let rID = this.$route.params.id || '';
             let role = filter(this.allRoles, r => r.id == rID)[0];
             this.role = assign({}, this.role, role);
         },
 
         loadRole() {
-            let rID = this.$route.params.id || null;
+            let rID = this.$route.params.id || '';
             this.getRole(rID);
 
-            this.title = rID == null ? 'Create a new role' : 'Edit role'
+            this.title = rID == '' ? 'Create a new role' : 'Edit role'
         },
 
         submitForm() {
@@ -95,7 +95,7 @@ export default {
                         role: this.role,
                         cb: () => {
                             $.Notification.autoHideNotify('success', 'top right', 'Thành công','Cập nhật dữ liệu thành công.')
-                            this.$router.push('/role')
+                            this.$router.push({ name: 'role'})
                         }
                     })
                 }

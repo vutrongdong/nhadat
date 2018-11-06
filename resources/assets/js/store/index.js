@@ -8,9 +8,17 @@ import {
     FETCHING_RESOURCES_FAIL
 } from './mutation-types';
 
-import * as modules from './modules';
 import tag from './modules/tag'
-console.log(modules)
+import blog from './modules/blog'
+import category from './modules/category'
+import city from './modules/city'
+import permission from './modules/permission'
+import role from './modules/role'
+import setting from './modules/setting'
+import user from './modules/user'
+// import * as modules from './modules';
+// import tag from './modules/tag'
+// console.log(modules)
 
 Vue.use(Vuex)
 const debug = process.env.NODE_ENV !== 'production'
@@ -70,8 +78,15 @@ const getters = {
 export default new Vuex.Store({
     strict: debug,
     modules: {
-        ...modules,
-        ...tag
+        // ...modules,
+        tag,
+        blog,
+        category,
+        city,
+        permission,
+        role,
+        setting,
+        user
     },
     state,
     actions,

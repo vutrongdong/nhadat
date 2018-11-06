@@ -1,0 +1,25 @@
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+.img-fit{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}

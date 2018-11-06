@@ -4,17 +4,17 @@ import EditTag from '../components/tag/Edit';
 
 export default [
     {
-        path: '/tags',
+        path: '/admin/tags',
         name: 'tag',
         component: Tag
     },
     {
-        path: '/tags/create',
+        path: '/admin/tags/create',
         name: 'tag.create',
         component: NewTag
     },
     {
-        path: '/tags/edit/:id',
+        path: '/admin/tags/edit/:id',
         name: 'tag.edit',
         component: EditTag
     }

@@ -5,8 +5,8 @@
                 Tạo mới tag
             </h4>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><router-link to="/">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item"><router-link to="/tags">Tag</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'tag'}">Tag</router-link></li>
                 <li class="breadcrumb-item active">Tạo mới tag</li>
             </ol>
             <p class="clearfix"></p>
@@ -33,7 +33,7 @@ export default {
                 tag: tag,
                 cb: () => {
                     $.Notification.autoHideNotify('success', 'top right', 'Thành công', 'Thêm dữ liệu thành công.')
-                    this.$router.push('/tags')
+                    this.$router.push({ name: 'tag' })
                 }
             })
         }

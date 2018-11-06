@@ -54,7 +54,7 @@
                             </div>
 
                             <!-- item-->
-                            <router-link class="dropdown-item notify-item" to="/profile">
+                            <router-link class="dropdown-item notify-item" :to="{ name: 'profile'}">
                                 <i class="md md-account-circle"></i> <span>{{ __('Thông tin cá nhân') }}</span>
                             </router-link>
 
@@ -90,7 +90,7 @@
                         <li class="text-muted menu-title">{{ __('Menu') }}</li>
 
                         <li class="has_sub">
-                            <router-link class="waves-effect" to="/"><i class="ti-home"></i> {{ __('Bảng điều khiển') }}</router-link>
+                            <router-link class="waves-effect" :to="{ name: 'home'}"><i class="ti-home"></i> {{ __('Bảng điều khiển') }}</router-link>
                         </li>
 
                         <li class="has_sub">
@@ -98,17 +98,17 @@
                             <ul class="list-unstyled">
                                 @can('category.view', App\User::class)
                                 <li>
-                                    <router-link to="/categories">{{ __('Danh mục') }}</router-link>
+                                    <router-link :to="{ name: 'category'}">{{ __('Danh mục') }}</router-link>
                                 </li>
                                 @endcan
                                 @can('blog.view', App\User::class)
                                 <li>
-                                    <router-link to="/blogs">{{ __('Bài viết') }}</router-link>
+                                    <router-link :to="{ name: 'blog'}">{{ __('Bài viết') }}</router-link>
                                 </li>
                                 @endcan
                                 @can('tag.view', App\User::class)
                                 <li>
-                                    <router-link to="/tags">{{ __('Tag') }}</router-link>
+                                    <router-link  :to="{ name: 'tag'}">{{ __('Tag') }}</router-link>
                                 </li>
                                 @endcan
                             </ul>
@@ -119,19 +119,19 @@
                             <ul class="list-unstyled">
                                 @can('manage-user', App\User::class)
                                 <li>
-                                    <router-link to="/users">{{ __('Tài khoản') }}</router-link>
+                                    <router-link :to="{ name: 'user'}">{{ __('Tài khoản') }}</router-link>
                                 </li>
                                 @endcan
 
                                 @can('roles.view', App\User::class)
                                 <li>
-                                    <router-link to="/role">{{ __('Phân quyền') }}</router-link>
+                                    <router-link :to="{ name: 'role'}">{{ __('Phân quyền') }}</router-link>
                                 </li>
                                 @endcan
 
                                 @can('config-site', App\User::class)
                                 <li>
-                                    <router-link to="/setting">{{ __('Cấu hình website') }}</router-link>
+                                    <router-link :to="{ name: 'setting'}">{{ __('Cấu hình website') }}</router-link>
                                 </li>
                                 @endcan
                             </ul>
