@@ -45,7 +45,7 @@
                     <li class="list-inline-item dropdown notification-list">
                         <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="false" aria-expanded="false">
-                            <img src="/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                            <img src="/assets/images/users/avatar.jpg" alt="user" class="rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                             <!-- item-->
@@ -106,11 +106,11 @@
                                     <router-link :to="{ name: 'blog'}">{{ __('Bài viết') }}</router-link>
                                 </li>
                                 @endcan
-                                @can('tag.view', App\User::class)
+                                {{-- @can('tag.view', App\User::class)
                                 <li>
                                     <router-link  :to="{ name: 'tag'}">{{ __('Tag') }}</router-link>
                                 </li>
-                                @endcan
+                                @endcan --}}
                             </ul>
                         </li>
 

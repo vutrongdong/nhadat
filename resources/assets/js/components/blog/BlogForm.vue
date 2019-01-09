@@ -11,15 +11,16 @@
                     </div>
                     <div class="form-group">
                         <label class="text-right" for="slug">Slug (<span class="text-danger">*</span>)</label>
-                        <input type="text" id="slug" name="slug" class="form-control" placeholder="Nhập slug" v-model="blog.slug" v-validate="'required'" data-vv-as="slug">
+                        <input type="text" id="slug" name="slug" class="form-control" placeholder="Nhập slug" v-model="blog.slug" v-validate="'required'" data-vv-as="slug" :class="{'form-control' : true, 'is-invalid': errors.has('slug')}">
                         <div v-show="errors.has('slug')" class="text-danger">{{ errors.first('slug') }}</div>
                     </div>
                     <div class="form-group">
-                        <label class="text-right" for="category_id">Chọn danh mục</label>
-                        <select class="form-control" id="category_id" v-model="blog.category_id">
+                        <label class="text-right" for="category_id">Chọn danh mục(<span class="text-danger">*</span>)</label>
+                        <select class="form-control" v-validate="'required'" name="category_id" data-vv-as="danh mục cha" id="category_id" v-model="blog.category_id" :class="{'form-control' : true, 'is-invalid': errors.has('category_id')}">
                             <option :value="null">Chọn danh mục</option>
                             <option v-for="category in categories" :value="category.id" :key="category.id">{{ category.name }}</option>
                         </select>
+                        <div v-show="errors.has('category_id')" class="text-danger">{{ errors.first('category_id') }}</div>
                     </div>
                     <div class="form-group">
                         <label class="text-right">Trạng thái</label>
@@ -56,13 +57,14 @@
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
-                        <label class="text-right" for="image">Ảnh</label>
+                        <label class="text-right" for="image">Ảnh (<span class="text-danger">*</span>)</label>
                         <div class="upload" :class="{'has-image': blog.image}">
                             <label>
-                                <input class="form-control" id="image" type="file" name="image" @change="handerSelectImage">
+                                <input v-validate="'required'" class="form-control" id="image" type="file" name="image" @change="handerSelectImage" :class="{'form-control' : true, 'is-invalid': errors.has('image')}" data-vv-as="Hình ảnh">
                                 <img v-if="blog.image" :src="blog.image_path" />
                             </label>
                         </div>
+                        <div v-show="errors.has('image')" class="text-danger">{{ errors.first('image') }}</div>
                     </div>
                 </div>
                 <div class="col-12">
@@ -79,7 +81,7 @@
                         ></tinymce>
                     </div>
                 </div>
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <div class="form-group">
                         <label class="text-right" for="teaser">Tags</label>
                         <div>
@@ -87,7 +89,7 @@
                             <span class="label add-tag" @click="showAddTag"><i class="fa fa-plus"></i> Thêm tag</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <hr>
             <div class="row">

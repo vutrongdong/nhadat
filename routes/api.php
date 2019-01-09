@@ -27,6 +27,7 @@ Route::middleware('auth:api')->group(function () {
 	Route::get('/categories/to-tree', 'CategoryController@getToTree');
 	Route::get('/categories/to-select', 'CategoryController@getToSelect');
 	Route::get('/blogs/home', 'BlogController@blogHome');
+	Route::get('/blogs/search/{value}', 'BlogController@blogSearch');
 	Route::get('/blogs/detail/{id}', 'BlogController@showBySlug');
 	Route::get('/blogs/list/{cid}', 'BlogController@getByCategory');
 	Route::get('/blogs/menuhot', 'BlogController@getBlogHot');

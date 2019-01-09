@@ -59,6 +59,10 @@ class BlogController extends Controller {
 		$this->authorize('blog.view', $model);
 		return new BlogResource($model);
 	}
+	public function blogSearch(Request $request, $value) {
+		$this->authorize('blog.view');
+		return BlogResource::collection($this->model->search($value));
+	}
 
 	public function getByCategory(Request $request, $cid) {
 		$model = $this->model->getByCategory($cid);

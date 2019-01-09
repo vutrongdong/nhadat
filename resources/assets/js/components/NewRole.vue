@@ -4,7 +4,7 @@
             <h4 class="page-title">{{ title }}</h4>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item"><router-link :to="{ name: 'role'}">Role management</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'role'}">QUản lí chức quyền</router-link></li>
                 <li class="breadcrumb-item active">{{ title }}</li>
             </ol>
             <p class="clearfix"></p>
@@ -16,8 +16,8 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="role_title">Role name (<b class="text-danger">*</b>)</label>
-                                            <input type="text" id="role_name" name="role_name" :class="{'form-control' : true, 'is-invalid': errors.has('role_name')}" placeholder="Moderator, member..." v-model="role.name" @keyup="makeSlug" v-validate="{required:true}" data-vv-as="role name">
+                                            <label for="role_title">Tên chức quyền (<b class="text-danger">*</b>)</label>
+                                            <input type="text" id="role_name" name="role_name" :class="{'form-control' : true, 'is-invalid': errors.has('role_name')}" placeholder="Người điều hành, thành viên..." v-model="role.name" @keyup="makeSlug" v-validate="{required:true}" data-vv-as="role name">
                                             <div v-show="errors.has('role_name')" class="text-danger">{{ errors.first('role_name') }}</div>
                                         </div>
                                         <div class="form-group">
@@ -57,7 +57,7 @@ export default {
                 slug: '',
                 permissions: {}
             },
-            title: 'Create new a role'
+            title: 'Tạo một Chức quyền'
         }
     },
     computed: {
@@ -85,7 +85,7 @@ export default {
             let rID = this.$route.params.id || '';
             this.getRole(rID);
 
-            this.title = rID == '' ? 'Create a new role' : 'Edit role'
+            this.title = rID == '' ? 'Tạo mới quyền' : 'Sửa chức quyền'
         },
 
         submitForm() {

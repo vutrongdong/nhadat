@@ -13,10 +13,10 @@
                     <input type="text" id="slug" name="slug" class="form-control" placeholder="Nhập slug" v-model="category.slug" v-validate="'required'" data-vv-as="slug">
                     <div v-show="errors.has('slug')" class="text-danger">{{ errors.first('slug') }}</div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="text-right" for="icon">Icon</label>
                     <input type="text" id="icon" class="form-control" placeholder="Nhập icon" v-model="category.icon">
-                </div>
+                </div> -->
             </div>
             <div class="col-6">
                 <div class="form-group">

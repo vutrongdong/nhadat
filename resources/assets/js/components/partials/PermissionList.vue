@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Permission list {{ this.isObjectEmpty(this.defaultPermission) ? '' : ' :: ' + defaultPermission.name }}</h3>
+        <h3>Danh sách quyền: {{ this.isObjectEmpty(this.defaultPermission) ? '' : defaultPermission.name }}</h3>
         <ul class="list-unstyled">
             <li v-for="(p, role) in permissions">
                 <b class="text-primary">{{ p.title }}</b>

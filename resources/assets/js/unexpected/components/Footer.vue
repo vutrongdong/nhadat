@@ -2,8 +2,8 @@
     <div class="section fp-auto-height fp-section fp-table active fp-completely" data-anchor="footer" style="height: 424px;"><div class="fp-tableCell" style="height: 424px;">
         <footer>
             <div class="_layer col-lg-4 col-mg-4">
-                <a href="https://vincity.com/" class="_logo">
-                    <img src="https://vincity.com/wp-content/themes/vincity/assets/images/logo3-01.png" alt="#">
+                <a href="/" class="_logo">
+                    <img src="https://vincity.com/wp-content/themes/vincity/assets/images/logo3-01.png" alt="/">
                 </a>
                 <div id="_select_project_intro_list" class="clearfix">
                     <div class="project_intro_filter">
@@ -18,19 +18,19 @@
                         <ul data-project="1" class="is-active">
                             <li>
                                 <div class="_text-icon">
-                                    <i class="fa fa-map-marker"></i>
+                                    <i class="fas fa-map-marker"></i>
                                     <div class="_text">Số 458 phố Minh Khai, P. Vĩnh Tuy, Q. Hai Bà Trưng, Hà Nội.</div>
                                 </div>
                             </li>
                             <li>
                                 <div class="_text-icon">
-                                    <i class="fa fa-paper-plane"></i>
+                                    <i class="fas fa-paper-plane"></i>
                                     <div class="_text"><a href="mailto:info@vincity.com">info@vincity.com</a></div>
                                 </div>
                             </li>
                             <li>
                                 <div class="_text-icon">
-                                    <i class="fa fa-phone"></i>
+                                    <i class="fas fa-phone"></i>
                                     <div class="_text"><a href="tel:+842439749350">+84 24 39749350</a></div>
                                 </div>
                             </li>
@@ -59,10 +59,10 @@
                 </form>
                 <div class="_label">Social Media</div>
                 <ul class="socialMedia_list">
-                    <li><a target="_blank" href="https://www.facebook.com/VinCity.official/"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/VinCity.official/"><i class="fab fa-facebook-f"></i></a></li>
                     <!--            <div class="zalo-share-button" data-href="--><!--" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize=false></div>-->
                     <li><a target="_blank" href="https://zalo.me/4139690400021216450"><img src="https://vincity.com/wp-content/themes/vincity/assets/images/home/icon-zalo.png" alt="#"></a></li>
-                    <li><a target="_blank" href="https://www.youtube.com/channel/UCvUEmvnvqTCCcE9ufC_Q8Ww"><i class="fa fa-youtube"></i></a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/channel/UCvUEmvnvqTCCcE9ufC_Q8Ww"><i class="fab fa-youtube-square"></i></a></li>
                 </ul>
                 <div class="copyright_top">
                     <a target="_blank" href="http://vingroup.net/">Đây là website chính thức của VinCity. Nếu bạn muốn kết nối với Tập đoàn Vingroup, hoặc các đơn vị thành viên, hãy bấm vào <span>đây</span>!</a>

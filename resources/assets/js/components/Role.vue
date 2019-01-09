@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-12">
             <div class="btn-group pull-right m-t-15">
-                <router-link :to="{ name: 'role.create'}" class="btn btn-default waves-effect waves-light">Add a new role</router-link>
+                <router-link :to="{ name: 'role.create'}" class="btn btn-default waves-effect waves-light">Thêm mới quyền</router-link>
             </div>
             <h4 class="page-title">
-                Role management
+                Quản lí quyền
             </h4>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item active">Role management</li>
+                <li class="breadcrumb-item active">Quản lí quyền</li>
             </ol>
             <div class="card">
                 <div class="card-body">

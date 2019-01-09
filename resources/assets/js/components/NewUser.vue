@@ -6,7 +6,7 @@
             </h4>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item"><router-link :to="{ name: 'user'}">User management</router-link></li>
+                <li class="breadcrumb-item"><router-link :to="{ name: 'user'}">Quản lí nguòi dùng</router-link></li>
                 <li class="breadcrumb-item active">{{ title }}</li>
             </ol>
             <p class="clearfix"></p>
@@ -104,7 +104,7 @@ import { assign } from 'lodash'
 export default {
     data() {
         return {
-            title: 'Create a new user',
+            title: 'Tạo người dùng mới',
             formType: true,
             user: {
                 email: "",
@@ -134,7 +134,7 @@ export default {
                 cb: this.fillUser
             });
 
-            this.title = uID == '' ? 'Create a new user' : 'Edit user'
+            this.title = uID == '' ? 'Tạo người dùng mới' : 'Sửa người dùng'
             this.formType = uID == '' ? true : false //
         },
 

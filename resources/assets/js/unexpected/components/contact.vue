@@ -2,15 +2,13 @@
     <div id="contact">
         <div class="entry-content"> 
             <ol class="breadcrumb" style="margin-top: 10px;">
-                <li class="breadcrumb-item"><router-link :to="{ name: 'homefrontend'}">Trang chủ</router-link></li>
-            </ol>
-            <div>
-                <h4 class="page-title" style="color:blue">Liên hệ</h4>
-            </div>
-            <p class="suppbox-name" style="text-align: center;"><span style="font-size: 18pt;"><strong>PHAN PHƯƠNG THÚY</strong></span></p>
-            <p class="suppbox-ofs" style="text-align: center;"><strong><span style="font-size: 14pt;">Trưởng Phòng&nbsp;Kinh Doanh</span></strong></p>
+            <li class="breadcrumb-item"><router-link :to="{ name: 'homefrontend'}">Trang chủ</router-link></li>
+            <li class="breadcrumb-item active">Liên hệ</li>
+        </ol>
+            <p class="suppbox-name" style="text-align: center;"><span style="font-size: 18pt;"><strong>Vũ Trọng Đông</strong></span></p>
+            <p class="suppbox-ofs" style="text-align: center;"><strong><span style="font-size: 14pt;">Nhân viên&nbsp;Chăm sóc khách hàng</span></strong></p>
             <p class="suppbox-mobile" style="text-align: center;"><span style="color: #000000; font-size: 14pt;">Mobile: <span style="color: #ff0000;"><strong>091.531.9398&nbsp;– 097.989.4596</strong></span></span></p>
-            <p class="suppbox-email" style="text-align: center;"><span style="color: #000000; font-size: 14pt;">Email: thuyanh2902.vinhomes@gmail.com</span></p>
+            <p class="suppbox-email" style="text-align: center;"><span style="color: #000000; font-size: 14pt;">Email: dong.vu@futa.vn</span></p>
         </div>
     </div>
 </template>

@@ -2,11 +2,11 @@
     <div class="row">
         <div class="col-12">
             <h4 class="page-title">
-                Website's settings
+                Cài đặt trang web
             </h4>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item active">Setting</li>
+                <li class="breadcrumb-item active"> Cài đặt</li>
             </ol>
             <div class="card">
                 <div class="card-body">
@@ -14,21 +14,21 @@
                         <div class="col-12">
                             <form class="form-horizontal" role="form">
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_title">Website title</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_title">Tiêu đề website</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_title" class="form-control" placeholder="Enter the website title" v-model="setting.title">
+                                        <input type="text" id="setting_title" class="form-control" placeholder="Nhập tiêu đề trang web" v-model="setting.title">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_keyword">Website keywords</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_keyword">Từ khóa trang web</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_keyword" class="form-control" placeholder="Enter the website keywords" v-model="setting.keywords">
+                                        <input type="text" id="setting_keyword" class="form-control" placeholder="Nhập từ khóa" v-model="setting.keywords">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_description">Website description</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_description">Mô tả website</label>
                                     <div class="col-7">
-                                        <textarea id="setting_description" class="form-control" v-model="setting.description" placeholder="Enter the website description"></textarea>
+                                        <textarea id="setting_description" class="form-control" v-model="setting.description" placeholder="Nhập mô tả"></textarea>
                                     </div>
                                 </div>
                                 <hr>

@@ -74,7 +74,7 @@ class BlogRepository extends BaseRepository {
 			->where('active', Blog::ENABLE)
 			->orderBy('created_at', 'DESC')
 			->orderBy('updated_at', 'DESC')
-			->simplePaginate(10);
+			->simplePaginate(9);
 	}
 
 	public function getForLastest() {
@@ -116,12 +116,12 @@ class BlogRepository extends BaseRepository {
 			->orderBy('created_at', 'DESC')
 			->orderBy('updated_at', 'DESC')
 			->where('hot', '=', 1)
-			->limit(8)
+			->limit(14)
 			->get();
 
 	}
 
-	public function sreach($value = null) {
+	public function search($value = null) {
 		if ($value) {
 			return $this->model->where('active', Blog::ENABLE)
 				->where('title', 'like', "%{$value}%")

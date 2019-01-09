@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-12">
             <div class="btn-group pull-right m-t-15">
-                <router-link :to="{ name: 'user.create'}" class="btn btn-default waves-effect waves-light">Create new user</router-link>
+                <router-link :to="{ name: 'user.create'}" class="btn btn-default waves-effect waves-light">Tạo người dùng mới</router-link>
             </div>
             <h4 class="page-title">
-                User management
+                Quản lí người dùng
             </h4>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><router-link :to="{ name: 'home'}">Bảng điều khiển</router-link></li>
-                <li class="breadcrumb-item active">User management</li>
+                <li class="breadcrumb-item active">Quản lí người dùng</li>
             </ol>
             <p class="clearfix"></p>
             <div class="card">

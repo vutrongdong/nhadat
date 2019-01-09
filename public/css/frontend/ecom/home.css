@@ -1,3 +1,10 @@
+.caret {
+  display: inline !important;
+  border-left: 0px !important;
+  border-right: 1px solid transparent !important;
+  height: 20px !important;
+}
+
 #home #title_main {
   text-align: center;
 }

@@ -10,5 +10,6 @@
             </ol>
             <p class="clearfix"></p>
         </div>
+        <p>Chức năng này chưa hoàn thiện</p>
     </div>
 </template>

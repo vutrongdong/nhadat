@@ -53,7 +53,6 @@ import {
 
     try {
       let blogs = await axios.get('/blogs/menuhot', { params })
-      console.log("blog", blogs)
       commit(SET_BLOG_HOT, blogs.data.data)
       commit(FETCHING_RESOURCES_DONE)
     } catch(err) {
@@ -71,7 +70,6 @@ import {
 
     try {
       let blogs = await axios.get('/blogs/home', { params })
-      console.log("params",params)
       commit(SET_BLOG, blogs.data.data)
       if (blogs.data.meta) {
         commit(SET_BLOG_PAGINATION, blogs.data.meta)
@@ -152,14 +150,32 @@ import {
     let { cid, cb } = payload ? payload : {}
 
     try {
-      console.log("blog", cid)
       let blogs = await axios.get('/blogs/list/'+cid)
-      console.log(blogs.data.values)
       commit(SET_BLOG, blogs.data.values)
       if (blogs.data.meta) {
         // commit(SET_BLOG_PAGINATION, blogs.data.meta)
       }
       commit(FETCHING_RESOURCES_DONE)
+    } catch(err) {
+      commit(FETCHING_RESOURCES_FAIL, err)
+    }
+  },
+  /**
+   * [GetBlogForHome description]
+   * @param {[type]} options.commit [description]
+   * @param {[type]} payload        [description]
+   */
+
+   async searchBlog({ commit }, payload) {
+    commit(FETCHING_RESOURCES)
+    let { value, cb } = payload ? payload : {}
+
+    try {
+      if(value){
+        let blogs = await axios.get('/blogs/search/'+value)
+        commit(SET_BLOG, blogs.data.data)
+        commit(FETCHING_RESOURCES_DONE)
+      }
     } catch(err) {
       commit(FETCHING_RESOURCES_FAIL, err)
     }
