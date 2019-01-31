@@ -69,9 +69,7 @@ const getters = {
    * Get all Setting
    * @param {state} state
    */
-  allSettings (state) {
-    return state.setting
-  },
+  allSettings: (state) => state.setting
 }
 
 export default {

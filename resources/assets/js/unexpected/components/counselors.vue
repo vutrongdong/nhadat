@@ -22,14 +22,14 @@
             <div class="supp-box col-lg-6 col-md-6 col-sm-6 sol-xs-12">
                 <div class="p-box">
                     <div class='col-lg-4 col-md-4 col-sm-4 sol-xs-12'>
-                        <img width="100%" src="http://sangiaodichvinhomes.vn/wp-content/uploads/2017/03/avatar2.jpg" draggable="false">
+                        <img width="100%" src="https://lh3.googleusercontent.com/nQz0Qly-u3Nl0-xpA7xr76Vu8VGlnvCxTVncQdmHifBqCJKI6ie_uCLVDuJMiNzswAP-hD7ZgNxSjIeZCwsWnsGRbrOlSokRxTvhMsuzq6ILPzTSJ5tmgi4vNiLGSNaIVn987jfbeGqyGu9GR9PPfx8O9Ug87qBjBNtpy8OnIkclWvbBEpxRUdgsFTv-8oeYqlkbZb1FdvA9lsfukjcsE-yrDAxJtR5C4vu93LfAYl53uA8ErUbQCjhMfKMHBKnk3uLJTR7UbQ0HW_JXF861WKr_UeK0jHu5wLwPacO_l_pvnFXl8GlMh_q461cqzaZ2ZOZS8GybkzvGHaiC1zc0-SCDqdwcFv6rnERl-HHY48UKYaf10YcnvJ9is2UYtPPVhxMvrpSNQ7IFaEqEurl2sCnQwgKeRlxYjHXWq9jY35VZxSt2R7Tk36DD6Q0ODmKGl8sWbu3u6W3czQMS3h6q8-kgndjVAt0nzOjkbpjpT3NuTNggYRTS-DncRi2VYSfo-FLw-qPHDgNCqFJWYHNb6yCGyzrg6tclReh-NjM-SyK5tCQDI-7HDvAKaJfByrkTtEOo4nygyCZ62OGv8Ah-B8HIcBDTRpWB0W6tDRJeVeLTmnJptg4mwehMZtzeJvxPVFc3uDHZVtBmrw87zJMwV2Q2=w165-h220-no" draggable="false">
                     </div>
                     <div class='col-lg-8 col-md-8 col-sm-8 sol-xs-12'>
-                        <p class="suppbox-name">PHAN PHƯƠNG THÚY</p>
-                        <p class="suppbox-ofs">Trưởng Phòng Kinh Doanh</p>
-                        <p class="suppbox-mobile">Mobile: <a href="tel:091.531.9398">091.531.9398</a></p>
-                        <p class="suppbox-email">Email: thuyanh2902.vinhomes@gmail.com</p>
-                        <p class="suppbox-link"><a href="">Xem chi tiết thêm ... </a></p>
+                        <p class="suppbox-name">Vũ Minh Chí</p>
+                        <p class="suppbox-ofs">Nhân viên chăm sóc khách hàng</p>
+                        <p class="suppbox-mobile">Mobile 1: <a href="tel:01639732215">01639732215</a></p>
+                        <p class="suppbox-mobile">Mobile 2: <a href="tel:012345678910">012345678910</a></p>
+                        <p class="suppbox-email">Email: chiminhvu97.vinhomes@gmail.com</p>
                     </div>
                 </div>
             </div>  

@@ -14,46 +14,53 @@
                         <div class="col-12">
                             <form class="form-horizontal" role="form">
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_title">Tiêu đề website</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_title">Tiêu đề website(<span class="text-danger">*</span>)</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_title" class="form-control" placeholder="Nhập tiêu đề trang web" v-model="setting.title">
+                                        <input type="text" v-validate="'required'" data-vv-as="Tiêu đề" name="title" id="setting_title" class="form-control" placeholder="Nhập tiêu đề trang web" v-model="setting.title">
+                                        <div v-show="errors.has('title')" class="text-danger">{{ errors.first('title') }}</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_keyword">Từ khóa trang web</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_keyword">Từ khóa(<span class="text-danger">*</span>)</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_keyword" class="form-control" placeholder="Nhập từ khóa" v-model="setting.keywords">
+                                        <input type="text"  v-validate="'required'" data-vv-as="Từ khóa" id="setting_keyword" class="form-control" name="keywords" placeholder="Nhập từ khóa" v-model="setting.keywords">
+                                        <div v-show="errors.has('keywords')" class="text-danger">{{ errors.first('keywords') }}</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_description">Mô tả website</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_description">Mô tả website(<span class="text-danger">*</span>)</label>
                                     <div class="col-7">
-                                        <textarea id="setting_description" class="form-control" v-model="setting.description" placeholder="Nhập mô tả"></textarea>
+                                        <textarea id="setting_description" v-validate="'required'" data-vv-as="Mô tả" name="description" class="form-control" v-model="setting.description" placeholder="Nhập mô tả"></textarea>
+                                        <div v-show="errors.has('description')" class="text-danger">{{ errors.first('description') }}</div>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_company_name">Tên công ty</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_company_name">Tên công ty(<span class="text-danger">*</span>)</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_company_name" class="form-control" placeholder="Nhập tên công ty" v-model="setting.name">
+                                        <input type="text" name="name" v-validate="'required'" data-vv-as="Tên công ty" id="setting_company_name" class="form-control" placeholder="Nhập tên công ty" v-model="setting.name">
+                                        <div v-show="errors.has('name')" class="text-danger">{{ errors.first('name') }}</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_company_addr">Địa chỉ</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_company_addr">Địa chỉ(<span class="text-danger">*</span>)</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_company_addr" class="form-control" placeholder="Nhập địa chỉ" v-model="setting.address">
+                                        <input type="text" name="address" v-validate="'required'" data-vv-as="Địa chỉ" id="setting_company_addr" class="form-control" placeholder="Nhập địa chỉ" v-model="setting.address">
+                                        <div v-show="errors.has('address')" class="text-danger">{{ errors.first('address') }}</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_company_phone">Số điện thoại</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_company_phone">Số điện thoại(<span class="text-danger">*</span>)</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_company_phone" class="form-control" placeholder="Nhập số điện thoại" v-model="setting.phone">
+                                        <input type="number" id="setting_company_phone" name="phone" v-validate="'required|max:13|min:10'" data-vv-as="Số điện thoại" class="form-control" placeholder="Nhập số điện thoại" v-model="setting.phone">
+                                        <div v-show="errors.has('phone')" class="text-danger">{{ errors.first('phone') }}</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_company_email">Email</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_company_email">Email(<span class="text-danger">*</span>)</label>
                                     <div class="col-7">
-                                        <input type="text" id="setting_company_email" class="form-control" placeholder="Nhập Email" v-model="setting.email">
+                                        <input type="text" name="email" v-validate="'required|email'" data-vv-as="Email" id="setting_company_email" class="form-control" placeholder="Nhập Email" v-model="setting.email">
+                                        <div v-show="errors.has('email')" class="text-danger">{{ errors.first('email') }}</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -69,9 +76,20 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label text-right" for="setting_company_about">Giới thiệu công ty</label>
+                                    <label class="col-2 col-form-label text-right" for="setting_company_about">Giới thiệu công ty(<span class="text-danger">*</span>)</label>
                                     <div class="col-9">
-                                        <tinymce id="t1" :plugins="plugins" v-model="setting.about"></tinymce>
+                                        <tinymce
+                                        id="about"
+                                        v-validate="'required'" data-vv-as="Nội dung"
+                                        name="about"
+                                        :plugins="plugins"
+                                        v-model="setting.about"
+                                        toolbar1="formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | codesample"
+                                        toolbar2=""
+                                        :other_options="{ height: '300px'}"
+                                        @editorInit="e => e.setContent(setting.about ? setting.about : '')"
+                                        ></tinymce>
+                                        <div v-show="errors.has('about')" class="text-danger">{{ errors.first('about') }}</div>
                                     </div>
                                 </div>
                                 <hr>
@@ -120,9 +138,9 @@ export default {
         return {
             setting: {},
             plugins: [
-                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                "save table contextmenu directionality emoticons template paste textcolor"
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+            "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+            "save table contextmenu directionality emoticons template paste textcolor"
             ],
         }
     },
@@ -135,9 +153,15 @@ export default {
             this.setting = assign({}, this.setting, this.allSettings)
         },
         submitForm() {
-            this.pushSetting({
-                setting: this.setting,
-                cb: $.Notification.autoHideNotify('success', 'top right', 'Thành công','Cập nhật dữ liệu thành công.')
+            this.$validator.validate().then(result => {
+                if (result) {
+                    this.pushSetting({
+                        setting: this.setting,
+                        cb: $.Notification.autoHideNotify('success', 'top right', 'Thành công','Cập nhật dữ liệu thành công.')
+                    })
+                } else {
+                    $.Notification.autoHideNotify('warning', 'top right', 'Cảnh báo', 'Vui lòng kiểm tra thông tin cần nhập')
+                }
             })
         }
     },

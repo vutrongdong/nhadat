@@ -6,32 +6,24 @@
                     <img src="https://vincity.com/wp-content/themes/vincity/assets/images/logo3-01.png" alt="/">
                 </a>
                 <div id="_select_project_intro_list" class="clearfix">
-                    <div class="project_intro_filter">
-                        <div class="_intro_active" id="js_tab-project">
-                            <a href="javascript:void();" class="is-active" data-head="">CÔNG TY CỔ PHẦN VINHOMES</a>
-                        </div>
-                        <div class="_select_project_intro_list">
-                            <div class="_item"><a href="javascript:void();" class="is-active" data-project="1" data-title="CÔNG TY CỔ PHẦN VINHOMES">CÔNG TY CỔ PHẦN VINHOMES</a></div>
-                        </div>
-                    </div>
                     <div class="project_intro_list">
                         <ul data-project="1" class="is-active">
                             <li>
                                 <div class="_text-icon">
                                     <i class="fas fa-map-marker"></i>
-                                    <div class="_text">Số 458 phố Minh Khai, P. Vĩnh Tuy, Q. Hai Bà Trưng, Hà Nội.</div>
+                                    <div class="_text">{{ allSettings.address }}</div>
                                 </div>
                             </li>
                             <li>
                                 <div class="_text-icon">
                                     <i class="fas fa-paper-plane"></i>
-                                    <div class="_text"><a href="mailto:info@vincity.com">info@vincity.com</a></div>
+                                    <div class="_text"><a :href="allSettings.email">{{ allSettings.email }}</a></div>
                                 </div>
                             </li>
                             <li>
                                 <div class="_text-icon">
                                     <i class="fas fa-phone"></i>
-                                    <div class="_text"><a href="tel:+842439749350">+84 24 39749350</a></div>
+                                    <div class="_text"><a :href="allSettings.phone">{{ allSettings.phone }}</a></div>
                                 </div>
                             </li>
                         </ul>
@@ -42,26 +34,15 @@
                 <div class="_layer-left clearfix">
                 </div>
                 <div class="_layer-right clearfix">
-                    <div class="_label">Đại đô thị đẳng Cấp Singapore và hơn thế nữa</div>
+                    <div class="_label">{{ allSettings.title }}</div>
                 </div>
                 <div class="_layer-rigt-bottom">
-                    Thông tin, hình ảnh, các tiện ích trên website này chỉ mang tính chất minh hoạ tương đối và có thể được điều chỉnh theo quyết định của Chủ đầu tư tại từng thời điểm đảm bảo phù hợp quy hoạch và thực tế thi công dự án. Các thông tin, cam kết chính thức sẽ được quy định cụ thể tại Hợp đồng mua bán. Việc quản lý, vận hành và kinh doanh của khu đô thị sẽ theo quy định của Ban quản lý.
+                    <p v-html="allSettings.about"></p>
                 </div>
-                <div class="_label label-notice">Đăng ký nhận tin để chạm tới ước mơ</div>
-                <form method="POST" id="form_subscribe_ajax" class="form_subscribe">
-                    <input type="hidden" name="action" value="subscriber_submit_ajax">
-                    <input type="hidden" name="nonce" value="7aa1ac1703">
-                    <div class="form-group">
-                        <input type="text" class="form-controls" id="contact_email" name="subscriber_email" placeholder="Email của bạn" required="">
-                        <button type="submit" class="_submit" id="send_text">Đăng ký</button>
-                    </div>
-                    <div class="form-group-msg msg_frm"></div>
-                </form>
-                <div class="_label">Social Media</div>
+                <div class="_label" style="margin-top: 30px;">Social Media</div>
                 <ul class="socialMedia_list">
-                    <li><a target="_blank" href="https://www.facebook.com/VinCity.official/"><i class="fab fa-facebook-f"></i></a></li>
-                    <!--            <div class="zalo-share-button" data-href="--><!--" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize=false></div>-->
-                    <li><a target="_blank" href="https://zalo.me/4139690400021216450"><img src="https://vincity.com/wp-content/themes/vincity/assets/images/home/icon-zalo.png" alt="#"></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/dong.vutrong.79"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a target="_blank" href="https://chat.zalo.me/"><img src="https://vincity.com/wp-content/themes/vincity/assets/images/home/icon-zalo.png" alt="#"></a></li>
                     <li><a target="_blank" href="https://www.youtube.com/channel/UCvUEmvnvqTCCcE9ufC_Q8Ww"><i class="fab fa-youtube-square"></i></a></li>
                 </ul>
                 <div class="copyright_top">
@@ -69,7 +50,7 @@
                 </div>
             </div>
             <div class="copyright">
-            <v-divider style="margin-top: 10px;"></v-divider>
+                <v-divider style="margin-top: 10px;"></v-divider>
                 Copyright © 2018 VINCITY. All Right Reserved | Một thành viên của Tập đoàn Vingroup | <a href="https://vincity.com/dieu-khoan/">Điều khoản</a> |
                 <a href="404">Sitemap</a>
             </div>
@@ -77,86 +58,26 @@
 
     </div></div>
 </template>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        var name_project = $('._select_project_intro_list ._item:first a').attr('data-title');
-        $('#js_tab-project a').text(name_project);
-// $( "#_mutilsite-home" ).selectmenu();
-// js tab_footer
-$('#js_tab-project').click(function(){
-    $('._select_project_intro_list').slideToggle(300);
-});
-$('[data-project]').each(function(index){
-    $(this).click(function(){
-        $(this).parent().parent('._select_project_intro_list').slideUp(300);
-        var html_tab = $(this).parent('._select_project_intro_list ._item').html();
-        $('#js_tab-project').html(html_tab);
-        var data_project = $(this).attr('data-project');
-        $('._select_project_intro_list ._item a').removeClass('is-active');
-        $('.project_intro_list ul').removeClass('is-active');
-        $('[data-project="'+ data_project +'"]').addClass('is-active');
-    });
-});
-// end
-function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+<script>
+import { mapActions, mapGetters } from 'vuex'
+export default {
+    computed: {
+        ...mapGetters(['allSettings'])
+    },
+    methods: {
+        ...mapActions(['fetchSetting']),
+    },
+    created() {
+        this.fetchSetting()
+    },
+    mounted() {
+        console.log(this.allSettings)
+    }
 }
-var check_boolean_email = false;
-$('#contact_email').change(function (event) {
-    var contact_email = $(this).val();
-    var contact_email_msg = $('body').find('.msg_frm');
-    if ( !validateEmail(contact_email) && contact_email ) {
-        contact_email_msg.text('Email không hợp lệ');
-        check_boolean_email = false;
-    } else {
-        contact_email_msg.text('');
-        check_boolean_email = true;
-    }
-});
-var submit_form = $('#form_subscribe_ajax');
-submit_form.submit(function (event) {
-    event.preventDefault();
-    var thisForm = $(this);
-    var formFields = thisForm.find('.form-group');
-    var formMessage = $('body').find('.msg_frm');
-    var formButton = $('#send_text');
-    var formButtonText = formButton.innerHTML;
-    var formButtonHide = thisForm.find('button');
-    if ( check_boolean_email ) {
-        $.ajax({
-            url: wp_vars.ADMIN_AJAX_URL,
-            type: 'POST',
-            dataType: 'json',
-            data: thisForm.serialize(),
-            beforeSend: function () {
-                formButton.text('Gửi...');
-            },
-            complete: function () {
-                formButton.text('Đăng ký');
-            }
-        })
-        .done(function (response) {
-            if (response.success) {
-                $(formFields).hide();
-                formButtonHide.hide();
-            }
-            if (response.msg) {
-                formMessage.text(response.msg);
-            }
-        })
-        .fail(function () {
-            console.log("ERROR: Failed to save subscribe information.");
-        });
-    } else {
-        console.log('Chưa thỏa mãn các điều kiện');
-        return false;
-    }
-});
-});
 </script>
+
 <style scoped>
-  .fp-auto-height.fp-section, .fp-auto-height .fp-slide, .fp-auto-height .fp-tableCell {
+.fp-auto-height.fp-section, .fp-auto-height .fp-slide, .fp-auto-height .fp-tableCell {
     height: auto !important;
 }
 

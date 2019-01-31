@@ -7,7 +7,7 @@
     <div class="wrapper-page">
         <div class="card-box">
             <div class="panel-heading">
-                <h4 class="text-center">Đăng nhập <strong class="text-custom">{{ config('app.name', 'Ecom') }}</strong></h4>
+                <h4 class="text-center">Đăng nhập<strong class="text-custom">{{ config('app.name', 'Ecom') }}</strong></h4>
             </div>
 
             <div class="p-20">
