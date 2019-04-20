@@ -59,12 +59,12 @@
                                     <label class="text-right">Tài khoản</label>
                                     <input type="text" class="form-control" placeholder="Tài khoản đăng nhập" v-model="user.email" disabled>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" v-if="formType">
                                     <label class="text-right" for="user_password">Mật khẩu (<span class="text-danger">*</span>)</label>
                                     <input type="password" id="user_password" :class="{'form-control' : true, 'is-invalid': errors.has('user_password')}" placeholder="Nhập mật khẩu" v-model="user.password" name="user_password" v-validate="valid_password" data-vv-as="mật khẩu">
                                     <div v-show="errors.has('user_password')" class="text-danger">{{ errors.first('user_password') }}</div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" v-if="formType">
                                     <label class="text-right" for="user_password_confirmation">Xác nhận mật khẩu (<span class="text-danger">*</span>)</label>
                                     <input type="password" id="user_password_confirmation" :class="{'form-control' : true, 'is-invalid': errors.has('user_password_confirmation')}" placeholder="Nhập lại mật khẩu" v-model="user.password_confirmation" name="user_password_confirmation" v-validate="valid_repassword" data-vv-as="xác nhận mật khẩu" ref="confirmation">
                                     <div v-show="errors.has('user_password_confirmation')" class="text-danger">{{ errors.first('user_password_confirmation') }}</div>
@@ -75,17 +75,13 @@
                                     <label class="text-right" for="user_job_title">Vai trò</label>
                                     <div class="custom-control custom-radio" v-for="role in allRoles" :key="role.id">
                                         <input type="radio" :id="'user_role'+role.id" :value="role.id" class="custom-control-input" v-model="user.role">
-                                        <label class="custom-control-label" :for="'user_role'+role.id">{{ role.name }} <small class="text-muted">{{ role.slug }}</small></label>
+                                        <label class="custom-control-label" :for="'user_role'+role.id">{{ role.name }}<small class="text-muted">{{ role.slug }}</small></label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="user_send_notify" v-model="user.send_notify">
-                                    <label class="custom-control-label" for="user_send_notify">Gửi email thông báo cho tài khoản này.</label>
-                                </div>
                                 <p class="clearfix"></p>
                                 <button class="btn btn-default" type="submit">{{ title }}</button>
                                 <router-link to="/users" class="btn btn-link">Trở lại</router-link>
@@ -109,8 +105,8 @@ export default {
             user: {
                 email: "",
                 phone: "",
-                city_id: "",
-                district_id: "",
+                city_id: null,
+                district_id: null,
                 password: "",
                 password_confirmation: "",
                 send_notify: true
@@ -149,6 +145,7 @@ export default {
         },
 
         formSubmit() {
+            console.log(this.user)
             this.$validator.validate().then(result => {
                 if (result) {
                     this.pushUser({
@@ -172,6 +169,7 @@ export default {
         }
     },
     mounted() {
+        console.log(this.allCities)
         this.fetchRoles().then(() => this.loadUser());
         this.fetchCities();
     }

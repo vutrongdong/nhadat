@@ -35,11 +35,9 @@ class BlogController extends Controller {
 	 */
 
 	public function blogHome(Request $request) {
-		$this->authorize('blog.view');
 		return BlogResource::collection($this->model->getForHome());
 	}
 	public function getBlogHot(Request $request) {
-		$this->authorize('blog.view');
 		return BlogResource::collection($this->model->PostHot());
 	}
 
@@ -60,13 +58,11 @@ class BlogController extends Controller {
 		return new BlogResource($model);
 	}
 	public function blogSearch(Request $request, $value) {
-		$this->authorize('blog.view');
 		return BlogResource::collection($this->model->search($value));
 	}
 
 	public function getByCategory(Request $request, $cid) {
 		$model = $this->model->getByCategory($cid);
-		// dd($model);
 		$this->authorize('blog.view', $model);
 		return response()->json(['values' => $model]);
 	}
@@ -103,8 +99,8 @@ class BlogController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function destroy($id) {
-		$rs = $this->model->delete($id);
-		$this->authorize('blog.delete', $rs);
+		$this->authorize('blog.delete', $this->model->getById($id));
+		$this->model->delete($id);
 		return response()->json([], is_null($rs) ? 422 : 200);
 	}
 

@@ -60,7 +60,7 @@
                         <label class="text-right" for="image">Ảnh (<span class="text-danger">*</span>)</label>
                         <div class="upload" :class="{'has-image': blog.image}">
                             <label>
-                                <input v-validate="'required'" class="form-control" id="image" type="file" name="image" @change="handerSelectImage" :class="{'form-control' : true, 'is-invalid': errors.has('image')}" data-vv-as="Hình ảnh">
+                                <input v-validate="valid_image" class="form-control" id="image" type="file" name="image" @change="handerSelectImage" :class="{'form-control' : true, 'is-invalid': errors.has('image')}" data-vv-as="Hình ảnh">
                                 <img v-if="blog.image" :src="blog.image_path" />
                             </label>
                         </div>
@@ -81,15 +81,6 @@
                         ></tinymce>
                     </div>
                 </div>
-                <!-- <div class="col-12">
-                    <div class="form-group">
-                        <label class="text-right" for="teaser">Tags</label>
-                        <div>
-                            <span class="label label-default delete-tag" @click="removeTag(index)" :style="{'backgroundColor': tag.color}" v-for="(tag, index) in blog.tags" :index="tag.id">{{tag.name}} <i class="fa fa-times"></i></span>
-                            <span class="label add-tag" @click="showAddTag"><i class="fa fa-plus"></i> Thêm tag</span>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <hr>
             <div class="row">
@@ -119,9 +110,9 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -180,7 +171,10 @@ export default {
         }
     },
     computed: {
-        ...mapGetters(['allTags'])
+        ...mapGetters(['allTags']),
+        valid_image() {
+            return this.$route.params.id ? '' : 'required'
+        }
     },
     methods: {
         ...mapActions(['pushTag', 'fetchTags']),

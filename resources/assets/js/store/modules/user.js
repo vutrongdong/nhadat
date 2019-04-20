@@ -57,6 +57,18 @@ const actions = {
     }
   },
 
+  async resetPassWord({ commit }, payload) {
+    commit(FETCHING_RESOURCES)
+    const { user, cb } = payload || {}
+    try {
+      await axios.put('/user/reset_pass/' + user.id + '/edit', user)
+      commit(FETCHING_RESOURCES_DONE)
+      cb && cb()
+    } catch (err) {
+      commit(FETCHING_RESOURCES_FAIL, err)
+    }
+  },
+
   async getUser({ commit }, payload) {
     const { id, cb } = payload || {}
 

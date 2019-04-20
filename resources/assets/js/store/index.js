@@ -17,7 +17,6 @@ import role from './modules/role'
 import setting from './modules/setting'
 import user from './modules/user'
 // import * as modules from './modules';
-// import tag from './modules/tag'
 // console.log(modules)
 
 Vue.use(Vuex)

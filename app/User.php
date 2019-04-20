@@ -143,4 +143,8 @@ class User extends Authenticatable
         }
         return $query;
     }
+
+    public function getUserAttribute() {
+        return \Auth::user();
+    }
 }

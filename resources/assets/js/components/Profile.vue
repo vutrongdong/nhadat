@@ -9,7 +9,26 @@
                 <li class="breadcrumb-item active">Profile</li>
             </ol>
             <p class="clearfix"></p>
+            <div class="card">
+                <div class="card-body">
+                    <p>Tên người dùng: {{ user.name }}</p>
+                    <p>Địa chỉ: {{ user.address }}</p>
+                    <p>Số điện thoại: {{ user.phone }}</p>
+                    <p>Email: {{ user.email }}</p>
+                </div>
+            </div>
         </div>
-        <p>Chức năng này chưa hoàn thiện</p>
     </div>
 </template>
+<script>
+export default {
+    data () {
+        return {
+            user: {}
+        }
+    },
+    created() {
+        this.user = infoUser
+    }
+}
+</script>

@@ -3,9 +3,7 @@
       <aside id="sidebar">
         <div id="video">
             <h3 class="widget-title" style="margin-bottom: 0px;">Video</h3>
-            <video width="100%" controls>
-              <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-              </video>
+            <iframe width="100%" src="https://www.youtube.com/embed/vHnWLi6twZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div id="category-posts-2" class="widget cat-post-widget">
             <h3 class="widget-title" style="margin-bottom: 0px;">Dự án hot</h3>

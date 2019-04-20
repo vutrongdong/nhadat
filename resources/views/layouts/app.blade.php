@@ -15,8 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
-    <!-- Styles -->
-    {{-- <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css"> --}}
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/icons.css">
@@ -33,11 +31,6 @@
             <div class="topbar-left">
                 <div class="text-center">
                     <a href="{{ url('/') }}" class="logo"><i class="icon-magnet icon-c-logo"></i><span>{{ config('app.name', 'Ecom') }}</span></a>
-                    <!-- Image Logo here -->
-                    <!--<a href="index.html" class="logo">-->
-                        <!--<i class="icon-c-logo"> <img src="assets/images/logo_sm.png" height="42"/> </i>-->
-                        <!--<span><img src="assets/images/logo_light.png" height="20"/></span>-->
-                    <!--</a>-->
                 </div>
             </div>
             <nav class="navbar-custom">
@@ -56,6 +49,11 @@
                             <!-- item-->
                             <router-link class="dropdown-item notify-item" :to="{ name: 'profile'}">
                                 <i class="md md-account-circle"></i> <span>{{ __('Thông tin cá nhân') }}</span>
+                            </router-link>
+
+                            <!-- item-->
+                            <router-link class="dropdown-item notify-item" :to="{ name: 'reset'}">
+                                <i class="fas fa-key"></i> <span>{{ __('Thay đổi mật khẩu') }}</span>
                             </router-link>
 
                             <!-- item-->
@@ -87,49 +85,44 @@
                 <div id="sidebar-menu">
                     <ul>
 
-                        <li class="text-muted menu-title">{{ __('Menu') }}</li>
+                        <li class="text-muted menu-title" style="padding-left: 30px !important;">{{ __('Menu') }}</li>
 
                         <li class="has_sub">
                             <router-link class="waves-effect" :to="{ name: 'home'}"><i class="ti-home"></i> {{ __('Bảng điều khiển') }}</router-link>
                         </li>
 
                         <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="ti-rss-alt"></i> <span> {{ __('Bài viết') }} </span> <span class="menu-arrow"></span> </a>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="ti-rss-alt"></i> <span> {{ __('Dự án') }} </span> <span class="menu-arrow"></span> </a>
                             <ul class="list-unstyled">
-                                @can('category.view', App\User::class)
+                                @can('category.view')
                                 <li>
                                     <router-link :to="{ name: 'category'}">{{ __('Danh mục') }}</router-link>
                                 </li>
                                 @endcan
-                                @can('blog.view', App\User::class)
+                                @can('blog.view')
                                 <li>
                                     <router-link :to="{ name: 'blog'}">{{ __('Bài viết') }}</router-link>
                                 </li>
                                 @endcan
-                                {{-- @can('tag.view', App\User::class)
-                                <li>
-                                    <router-link  :to="{ name: 'tag'}">{{ __('Tag') }}</router-link>
-                                </li>
-                                @endcan --}}
                             </ul>
                         </li>
 
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i class="ti-settings"></i> <span> {{ __('Cài đặt') }} </span> <span class="menu-arrow"></span> </a>
                             <ul class="list-unstyled">
-                                @can('manage-user', App\User::class)
+                                @can('manage-user')
                                 <li>
                                     <router-link :to="{ name: 'user'}">{{ __('Tài khoản') }}</router-link>
                                 </li>
                                 @endcan
 
-                                @can('roles.view', App\User::class)
+                                @can('roles.view')
                                 <li>
                                     <router-link :to="{ name: 'role'}">{{ __('Phân quyền') }}</router-link>
                                 </li>
                                 @endcan
 
-                                @can('config-site', App\User::class)
+                                @can('config-site')
                                 <li>
                                     <router-link :to="{ name: 'setting'}">{{ __('Cấu hình website') }}</router-link>
                                 </li>
@@ -153,5 +146,12 @@
     </script>
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="/js/site.js" defer></script>
+    <script>
+        @auth
+            window.infoUser = {!! json_encode(Auth::user(), true) !!};
+        @else
+            window.infoUser = [];
+        @endauth
+    </script>
 </body>
 </html>

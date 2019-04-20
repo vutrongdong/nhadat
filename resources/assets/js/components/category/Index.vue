@@ -28,7 +28,7 @@
                                         <th>#</th>
                                         <th>Tên</th>
                                         <th>Slug</th>
-                                        <th>Danh mục cha</th>
+                                        <th></th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>

@@ -77,8 +77,8 @@ class CategoryController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function destroy($id) {
-		$rs = $this->model->delete($id);
-		$this->authorize('category.delete', $rs);
+		$this->authorize('category.delete', $this->model->getById($id));
+		$this->model->delete($id);
 		return response()->json([], is_null($rs) ? 422 : 200);
 	}
 

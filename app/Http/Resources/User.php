@@ -20,12 +20,12 @@ class User extends JsonResource {
 			'phone' => $this->phone,
 			'address' => $this->address,
 			'district' => [
-				// 'id' => $this->district->id,
-				// 'name' => $this->district->name,
+				'id' => $this->district['id'],
+				'name' => $this->district['name'],
 			],
 			'city' => [
-				// 'id' => $this->city->id,
-				// 'name' => $this->city->name,
+				'id' => $this->city['id'],
+				'name' => $this->city['name'],
 			],
 			'roles' => RoleResource::collection($this->roles),
 			'created_at' => $this->created_at,

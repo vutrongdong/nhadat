@@ -71,7 +71,13 @@ class UserController extends Controller
     public function update(UpdateUserRequest $request, $id)
     {
         $request->validated();
-        $user = $this->model->update($id, $request->all());
+        $user = $this->model->update($id, $request->only('name', 'email', 'phone', 'address', 'city_id', 'district_id'));
+        return new UserResource($user);
+    }
+
+    public function resetPassword(Request $request, $id)
+    {
+        $user = $this->model->update($id, $request->only('password'));
         return new UserResource($user);
     }
 

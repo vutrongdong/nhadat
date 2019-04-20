@@ -19,13 +19,13 @@
                 </div> -->
             </div>
             <div class="col-6">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="text-right" for="parent_id">Danh mục cha</label>
                     <select class="form-control" id="parent_id" v-model="category.parent_id">
                         <option :value="''">Chọn danh mục cha</option>
                         <option v-for="category in categories" :value="category.id" :key="category.id">{{ category.name }}</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label class="text-right" for="priority">Độ ưu tiên</label>
                     <input type="number" id="priority" class="form-control" placeholder="Nhập priority" v-model="category.priority">

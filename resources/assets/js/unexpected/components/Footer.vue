@@ -3,7 +3,7 @@
         <footer>
             <div class="_layer col-lg-4 col-mg-4">
                 <a href="/" class="_logo">
-                    <img src="https://vincity.com/wp-content/themes/vincity/assets/images/logo3-01.png" alt="/">
+                    <img src="http://vincityhanoigiagoc.com/wp-content/uploads/2018/08/logo-vincity.jpg" alt="/">
                 </a>
                 <div id="_select_project_intro_list" class="clearfix">
                     <div class="project_intro_list">
@@ -42,7 +42,7 @@
                 <div class="_label" style="margin-top: 30px;">Social Media</div>
                 <ul class="socialMedia_list">
                     <li><a target="_blank" href="https://www.facebook.com/dong.vutrong.79"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a target="_blank" href="https://chat.zalo.me/"><img src="https://vincity.com/wp-content/themes/vincity/assets/images/home/icon-zalo.png" alt="#"></a></li>
+                    <li><a target="_blank" href="https://chat.zalo.me/"><img src="https://expressmagazine.net/sites/default/files/imagesArticle/img-1376920218-1.png" alt="#"></a></li>
                     <li><a target="_blank" href="https://www.youtube.com/channel/UCvUEmvnvqTCCcE9ufC_Q8Ww"><i class="fab fa-youtube-square"></i></a></li>
                 </ul>
                 <div class="copyright_top">

@@ -6,10 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'BlogsSeeder' => $baseDir . '/database/seeds/BlogsSeeder.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'CategoriesSeeder' => $baseDir . '/database/seeds/CategoriesSeeder.php',
     'CitiesTableSeeder' => $baseDir . '/database/seeds/CitiesTableSeeder.php',
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
@@ -524,7 +526,7 @@ return array(
     'FTW\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'FTW\\Http\\Controllers\\Frontend\\V1\\FrontendController' => $baseDir . '/app/Http/Controllers/Frontend/V1/FrontendController.php',
     'FTW\\Http\\Controllers\\Frontend\\V1\\HomeController' => $baseDir . '/app/Http/Controllers/Frontend/V1/HomeController.php',
-    'FTW\\Http\\Controllers\\Frontend\\V3\\FronendController' => $baseDir . '/app/Http/Controllers/Frontend/V3/FronendController.php',
+    'FTW\\Http\\Controllers\\Frontend\\V3\\FrontendController' => $baseDir . '/app/Http/Controllers/Frontend/V3/FrontendController.php',
     'FTW\\Http\\Controllers\\Frontend\\V3\\HomeController' => $baseDir . '/app/Http/Controllers/Frontend/V3/HomeController.php',
     'FTW\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'FTW\\Http\\Controllers\\ProfileController' => $baseDir . '/app/Http/Controllers/ProfileController.php',
@@ -3533,6 +3535,7 @@ return array(
     'SebastianBergmann\\Timer\\RuntimeException' => $vendorDir . '/phpunit/php-timer/src/RuntimeException.php',
     'SebastianBergmann\\Timer\\Timer' => $vendorDir . '/phpunit/php-timer/src/Timer.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
+    'SettingWebSeed' => $baseDir . '/database/seeds/SettingWebSeed.php',
     'Symfony\\Bridge\\PsrHttpMessage\\Factory\\DiactorosFactory' => $vendorDir . '/symfony/psr-http-message-bridge/Factory/DiactorosFactory.php',
     'Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory' => $vendorDir . '/symfony/psr-http-message-bridge/Factory/HttpFoundationFactory.php',
     'Symfony\\Bridge\\PsrHttpMessage\\HttpFoundationFactoryInterface' => $vendorDir . '/symfony/psr-http-message-bridge/HttpFoundationFactoryInterface.php',

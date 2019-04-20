@@ -33,7 +33,7 @@ export default {
                 $.Notification.autoHideNotify('error', 'top right', 'Thất bại', msg.join("<br>"))
             } else if (this.app_errors && this.app_errors.status == 403) {
                 $.Notification.autoHideNotify('error', 'top right', 'Thất bại', "Bạn không có quyền thao tác hoặc truy cập.")
-                this.$router.push('/')
+                this.$router.push('/admin')
             }
         }
     },

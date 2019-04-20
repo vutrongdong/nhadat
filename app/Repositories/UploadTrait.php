@@ -10,10 +10,10 @@ trait UploadTrait
      * @param  mixed $file
      * @return array
      */
+
     public function upload($file, $resize = true)
     {
         $image_name = date('Y_m_d') ."_". md5($file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
-
         try {
             if ($file->getClientOriginalExtension() == 'svg') {
                 $file->move(storage_path($this->model->uploadPath), $image_name);
