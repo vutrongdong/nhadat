@@ -36,6 +36,7 @@ import {
       let blogs = await axios.get('/blogs', { params })
       commit(SET_BLOG, blogs.data.data)
       if (blogs.data.meta) {
+        console.log('meta', blogs.data.meta)
         commit(SET_BLOG_PAGINATION, blogs.data.meta)
       }
       commit(FETCHING_RESOURCES_DONE)

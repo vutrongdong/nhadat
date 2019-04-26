@@ -28,7 +28,7 @@ abstract class BaseRepository implements EntityInterface
      * @param  integer $size
      * @return Illuminate\Pagination\Paginator
      */
-    public function getByQuery($params = [], $size = 25)
+    public function getByQuery($params = [], $size = 10)
     {
         $sort = array_get($params, 'sort', 'created_at:-1');
         $params['sort'] = $sort;
